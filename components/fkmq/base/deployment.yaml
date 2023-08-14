@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: fkmq
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-vqro-tenant/byoc-app-rgrz/fkmq@sha256:ed22c6acd9d4b33478180e221926b76aad9b7530ec7a61b3cce4126cfd30c084
         name: my-java-quarkus
         ports:
         - containerPort: 8081
