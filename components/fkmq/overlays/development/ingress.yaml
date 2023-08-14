@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: fkmq
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: fkmq
+    app.kubernetes.io/part-of: byoc-app-rgrz
+  name: fkmq
+spec:
+  rules:
+  - host: fkmq-byoc-vqro-tenant.apps.ebc3bd57a97e4116aec9.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: fkmq
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}
